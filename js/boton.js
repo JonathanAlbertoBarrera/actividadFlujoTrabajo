@@ -8,5 +8,6 @@ function colorAleatorio() {
 }
 
 function cambiarColor(){
-    colorAleatorio();
+    const nuevoColor = colorAleatorio();
+    document.body.style.backgroundColor = nuevoColor;
 }
