@@ -1,4 +1,4 @@
-.card {
+.bcard {
  --background: linear-gradient(to left, #f7ba2b 0%, #ea5358 100%);
  width: 190px;
  height: 254px;
@@ -11,7 +11,7 @@
  z-index: 1;
 }
 
-.card::after {
+.bcard::after {
  position: absolute;
  content: "";
  top: 30px;
@@ -27,7 +27,7 @@
  transition: opacity .5s;
 }
 
-.card-info {
+.bcard-info {
  --color: #181818;
  background: var(--color);
  color: var(--color);
@@ -40,17 +40,17 @@
  border-radius: .7rem;
 }
 
-.card .title {
+.bcard .title {
  font-weight: bold;
  letter-spacing: .1em;
 }
 
 /*Hover*/
-.card:hover::after {
+.bcard:hover::after {
  opacity: 0;
 }
 
-.card:hover .card-info {
+.bcard:hover .card-info {
  color: #f7ba2b;
  transition: color 1s;
 }
