@@ -1,11 +1,239 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
+    />
     <title>Home</title>
-</head>
-<body>
-    
-</body>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+      crossorigin="anonymous"
+    />
+
+    <link rel="stylesheet" href="css/formulario.css" />
+    <link rel="stylesheet" href="css/cards.css" />
+  </head>
+
+  <body>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">Actividad diagnóstico</a>
+            <button
+                class="navbar-toggler"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#navbarNav"
+                aria-controls="navbarNav"
+                aria-expanded="false"
+                aria-label="Toggle navigation"
+            >
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#about">Formulario</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#services">Cartas</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact">DOM</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div>
+      <button
+        class="btn btn-lg btn-primary m-3"
+        onclick="cambiarColor()"
+      >
+        Caos
+      </button>
+    </div>
+
+    <section
+      class="w-100 d-flex flex-wrap align-items-center justify-content-center p-2 m-2 gap-2"
+    >
+      <div class="bcard">
+        <div class="bcard-info">
+          <p class="title">Magic Card 1</p>
+        </div>
+      </div>
+
+      <div class="bcard">
+        <div class="bcard-info">
+          <p class="title">Magic Card 2</p>
+        </div>
+      </div>
+
+      <div class="bcard">
+        <div class="bcard-info">
+          <p class="title">Magic Card 3</p>
+        </div>
+      </div>
+
+      <div class="bcard">
+        <div class="bcard-info">
+          <p class="title">Magic Card 4</p>
+        </div>
+      </div>
+
+      <div class="bcard">
+        <div class="bcard-info">
+          <p class="title">Magic Card 5</p>
+        </div>
+      </div>
+    </section>
+
+    <div
+      class="container d-flex justify-content-center align-items-center min-vh-100"
+    >
+      <div class="contact-card">
+        <h2 class="text-center mb-4">Contáctanos</h2>
+
+        <form id="form">
+          <!-- Nombre -->
+          <div class="mb-3">
+            <label for="nombre" class="form-label"
+              >Nombre</label
+            >
+            <input
+              type="text"
+              class="form-control"
+              id="nombre"
+              placeholder="Ingresa tu nombre"
+            />
+            <div
+              class="invalid-feedback"
+              id="nombreError"
+            ></div>
+          </div>
+
+          <!-- Correo -->
+          <div class="mb-3">
+            <label for="correo" class="form-label"
+              >Correo electrónico</label
+            >
+            <input
+              type="email"
+              class="form-control"
+              id="correo"
+              placeholder="ejemplo@correo.com"
+            />
+            <div
+              class="invalid-feedback"
+              id="correoError"
+            ></div>
+          </div>
+
+          <!-- Teléfono -->
+          <div class="mb-3">
+            <label for="telefono" class="form-label"
+              >Teléfono</label
+            >
+            <input
+              type="tel"
+              class="form-control"
+              id="telefono"
+              maxlength="10"
+              placeholder="10 dígitos"
+            />
+            <div
+              class="invalid-feedback"
+              id="telefonoError"
+            ></div>
+          </div>
+
+          <!-- Asunto -->
+          <div class="mb-3">
+            <label for="asunto" class="form-label"
+              >Asunto</label
+            >
+            <input
+              type="text"
+              class="form-control"
+              id="asunto"
+              placeholder="¿Cuál es el motivo de tu mensaje?"
+            />
+            <div
+              class="invalid-feedback"
+              id="asuntoError"
+            ></div>
+          </div>
+
+          <!-- Mensaje -->
+          <div class="mb-3">
+            <label for="mensaje" class="form-label"
+              >Mensaje</label
+            >
+            <textarea
+              class="form-control"
+              id="mensaje"
+              rows="4"
+              placeholder="Escribe tu mensaje..."
+            ></textarea>
+            <div
+              class="invalid-feedback"
+              id="mensajeError"
+            ></div>
+          </div>
+
+          <!-- Botón -->
+          <div class="d-grid">
+            <button type="submit" class="btn btn-primary">
+              Enviar mensaje
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <section id="contact" class="container py-5">
+        <h2 class="text-center mb-4">Gato DOM dinámico</h2>
+
+        <div class="row justify-content-center">
+            <div class="col-12 col-sm-8 col-md-6 col-lg-4">
+                <article id="gato-card" class="card shadow">
+                    <img src="assets/gato.jpg" class="card-img-top" alt="Gato sonriendo">
+
+                    <div class="card-body">
+                        <h3 id="gato-titulo" class="card-title">
+                            Michi programador
+                        </h3>
+
+                        <p id="gato-descripcion" class="card-text">
+                            Este gato todavía no tiene habilidades.
+                        </p>
+
+                        <div class="d-grid gap-2">
+                            <button id="agregar-habilidad" class="btn btn-primary" type="button">
+                                Agregar habilidad
+                            </button>
+
+                            <button id="modificar-gato" class="btn btn-warning" type="button">
+                                Modificar card
+                            </button>
+                        </div>
+
+                        <ul id="lista-habilidades" class="list-group list-group-flush mt-3"></ul>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+      crossorigin="anonymous"
+    ></script>
+    <script src="js/formulario.js"></script>
+    <script src="js/dom.js"></script>
+    <script src="js/boton.js"></script>
+  </body>
 </html>
