@@ -15,15 +15,8 @@
     <nav class="navbar navbar-expand-lg bg-body-tertiary">
         <div class="container-fluid">
             <a class="navbar-brand" href="#">Actividad diagnóstico</a>
-            <button
-                class="navbar-toggler"
-                type="button"
-                data-bs-toggle="collapse"
-                data-bs-target="#navbarNav"
-                aria-controls="navbarNav"
-                aria-expanded="false"
-                aria-label="Toggle navigation"
-            >
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
@@ -96,6 +89,39 @@
         </div>
     </div>
 
+    <section id="contact" class="container py-5">
+        <h2 class="text-center mb-4">Gato DOM dinámico</h2>
+
+        <div class="row justify-content-center">
+            <div class="col-12 col-sm-8 col-md-6 col-lg-4">
+                <article id="gato-card" class="card shadow">
+                    <img src="assets/gato.jpg" class="card-img-top" alt="Gato sonriendo">
+
+                    <div class="card-body">
+                        <h3 id="gato-titulo" class="card-title">
+                            Michi programador
+                        </h3>
+
+                        <p id="gato-descripcion" class="card-text">
+                            Este gato todavía no tiene habilidades.
+                        </p>
+
+                        <div class="d-grid gap-2">
+                            <button id="agregar-habilidad" class="btn btn-primary" type="button">
+                                Agregar habilidad
+                            </button>
+
+                            <button id="modificar-gato" class="btn btn-warning" type="button">
+                                Modificar card
+                            </button>
+                        </div>
+
+                        <ul id="lista-habilidades" class="list-group list-group-flush mt-3"></ul>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
